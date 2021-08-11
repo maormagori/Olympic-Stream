@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Video.js-->
+    <link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.11.4/video.min.js"></script>
+
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+
+    <!-- CSS Reset -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+
+    <!-- Milligram CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+        }
+
+        a,
+        h1,
+        h3 {
+            display: flex;
+            justify-content: center;
+        }
+
+        video-js {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+
+    <title>Maor Hot Server</title>
+</head>
+
+<body>
+    <h1>Hot Bot</h1>
+    <a href="/start-stream">
+        <button>
+            Start stream
+        </button>
+    </a>
+    <a href="/stop-stream">
+        <button>
+            Stop stream
+        </button>
+    </a>
+    <video id="player" class="video-js vjs-default-skin" height="360" width="640" controls preload="none">
+        <source src="http://213.57.211.193:80/hls/memir.m3u8" type="application/x-mpegURL" />
+    </video>
+    <script>
+        var player = videojs('#player');
+    </script>
+    <br />
+    <h3>http://213.57.211.193:80/hls/memir.m3u8</h3>
+</body>
+
+</html>
